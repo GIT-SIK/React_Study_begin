@@ -7,7 +7,6 @@
 </head>
 <body>
     <div id="root"></div>
-    <div id="root2"></div>
     <script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
     <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
     <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
@@ -34,40 +33,9 @@
     </script>
 
 
-    <!-- class JSX -->
-    <script type="text/babel"> 
-    'use strict';
-    class Btne2 extends React.Component{
-        constructor(props){
-
-            super(props);
-            this.state = {btnt2 : false};
-        }
-
-        render(){
-            if(this.state.btnt2) {
-                return 'click-jsx';
-            }
-
-           return (
-            <button onClick={() => this.setState({btnt2 : true})}>
-            click-jsx
-            </button>
-
-           );
-        }
-
-    }
-    </script>
-
     <script> 
         /* class */
         ReactDOM.render(React.createElement(Btne), document.querySelector('#root'));
-    </script>
-
-    <script type="text/babel"> 
-        /* class JSX */
-        ReactDOM.render(<Btne2/>, document.querySelector('#root2'));
     </script>
 
 </body>
